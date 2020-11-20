@@ -453,6 +453,8 @@ class Scene:
             new_drawing = deepcopy(drawing)
             new_drawing.x = scaled_drawing_point.integer_x
             new_drawing.y = scaled_drawing_point.integer_y
+            new_drawing.height = new_drawing.height * scale
+            new_drawing.width = new_drawing.width * scale
             resized_drawings.append(new_drawing)
         self.drawings = resized_drawings
 
